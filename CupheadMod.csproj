@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net48</TargetFramework>
+        <RootNamespace>CupheadMod</RootNamespace>
+        <Configurations>Debug;Release</Configurations>
+        <Nullable>enable</Nullable>
+        <AssemblyName>CupheadMod</AssemblyName>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+    
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <Optimize>False</Optimize>
+        <DebugType>embedded</DebugType>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <Optimize>True</Optimize>
+        <DebugType>none</DebugType>
+    </PropertyGroup>
+
+    <Import Project="..\btd6.targets" />
+
+    <ItemGroup>
+      <None Remove="Chalice\cuphead.bundle" />
+      <None Remove="Cuphead\BetterPeashooter-Icon.png" />
+      <None Remove="Cuphead\Chaser-Icon.png" />
+      <None Remove="Cuphead\Cuphead-Icon - Copy.png" />
+      <None Remove="Cuphead\Cuphead-Icon.png" />
+      <None Remove="Cuphead\CupheadDisplay.png" />
+      <None Remove="Cuphead\LongerRange-Icon.png" />
+      <None Remove="Cuphead\PeaShooterDisplay.png" />
+      <None Remove="Cuphead\SpreadDisplay.png" />
+      <None Remove="Cuphead\Spreadshot-Icon.png" />
+      <None Remove="Cuphead\SuperArtI-Icon.png" />
+      <None Remove="Mugman\BigBombs-Icon.png" />
+      <None Remove="Mugman\HeliPadDisplay.png" />
+      <None Remove="Mugman\HomingBullets-Icon.png" />
+      <None Remove="Mugman\MiniBombDisplay.png" />
+      <None Remove="Mugman\MiniBombs-Icon.png" />
+      <None Remove="Mugman\MiniPeaShooterDisplay.png" />
+      <None Remove="Mugman\MiniPeaShots-Icon.png" />
+      <None Remove="Mugman\Mugman-Icon.png" />
+      <None Remove="Mugman\MugmanDisplay.png" />
+      <None Remove="Mugman\TriplePeashots-Icon.png" />
+    </ItemGroup>
+</Project>
